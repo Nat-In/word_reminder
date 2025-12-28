@@ -1,0 +1,393 @@
+#- word: ""
+#  meaning: |
+  
+
+- word: "Compression"
+  meaning: |
+    Compression (noun) — the act or process of pressing or squeezing
+    something so that it becomes smaller or takes up less space.
+
+    1. Physical meaning → making something tighter or smaller by pressure:
+     * The air gets hotter during compression.
+     * Use a compression bandage for injuries.
+    👉 Key idea: making something denser or smaller.
+
+    2. Digital / technical meaning → Reducing the size of data or files
+    so they take up less storage or transmit faster:
+     * Image compression reduces file size.
+     * ZIP files use compression.
+    👉 Key idea: shrinking data while keeping it usable.
+
+    🗣 Pronunciation: /kəmˈpreʃən/
+
+- word: "Comprehension"
+  meaning: |
+    Comprehension (noun) — the ability to understand something.
+
+    1. General meaning → understanding ideas, information, or language:
+     * Good reading comprehension helps you understand texts. 
+       → It helps you make sense of what you read.
+     * His comprehension of the rules was limited. 
+       → He didn’t fully understand how the rules worked.
+    👉 Key idea: understanding the meaning of something.
+
+    2. Technical / learning meaning → your mental ability to process information:
+     * Language comprehension exercises help you improve vocabulary. 
+       → They help you understand words better.
+     * The test measures your comprehension of the material. 
+       → It checks how well you understood the lesson.
+    👉 Key idea: mental grasp or understanding.
+
+    🗣 Pronunciation: /ˌkɒmprɪˈhɛnʃən/
+
+- word: "compare"
+  meaning: |
+    compare (verb) — to examine two or more things in order
+    to see their similarities or differences.
+
+    1. General use → looking at similarities and differences:
+     * Compare these two photos. → Look at both and see how they differ.
+     * People often compare prices before buying. 
+       → They check which option is cheaper.
+    👉 Key idea: examining things side by side.
+
+    2. Academic / technical use → evaluating qualities or values:
+     * The study compares two learning methods. 
+       → It looks at both methods to see which works better.
+     * Compare the performance of both algorithms. 
+       → Check which algorithm gives better results.
+    👉 Key idea: analytical evaluation.
+
+    🗣 Pronunciation: /kəmˈpɛər/
+
+- word: "recognise"
+  meaning: |
+    recognise / recognize (verb) — to identify someone or something
+    because you have seen, heard, or experienced it before.
+
+    1. Identifying something familiar:
+     * I didn’t recognise her with the new haircut. 
+       → I didn’t realize it was her at first.
+     * Do you recognise this song? → Does it sound familiar to you?
+    👉 Key idea: knowing something again.
+
+    2. Accepting or acknowledging:
+     * The company recognised her achievements. 
+       → They officially acknowledged what she accomplished.
+     * He finally recognised that he was wrong. → He admitted it to himself.
+    👉 Key idea: acknowledging mentally or officially.
+
+    🗣 Pronunciation: /ˈrɛkəɡˌnaɪz/
+
+- word: "placing the data"
+  meaning: |
+    to put the data somewhere, usually in a specific position,
+    structure, file, table, or format.
+    It means deciding where the data should go and moving it to that place.
+
+    1. In programming / databases:
+     * Placing the data into a database table. → inserting it.
+     * Placing the data in the correct columns. → organizing it properly.
+     * Placing the data in memory. → storing it so the program can use it.
+
+    2. In everyday situations:
+     * Placing the data on the form. → writing or entering information.
+     * Placing the data in the report. → adding information to a document.
+
+    👉 Key idea: putting data into the right place or structure.
+
+- word: "assign"
+  meaning: |
+    assign (verb) — to give someone a task, role, or responsibility, 
+    or to designate something for a specific purpose.
+
+    1. In work / study:
+     * The manager assigned me a new task. 
+       → She gave me something new to do.
+     * Students were assigned a project. 
+       → They were given a project to complete.
+
+    2. In programming / data:
+     * Assigning a value to a variable. → putting data into it.
+     * Assigning a user to a group. → connecting them to the right category.
+
+    👉 Key idea: giving something a specific role, value, or destination.
+    🗣 Pronunciation: /əˈsaɪn/
+
+- word: "Dimension"
+  meaning: |
+    Dimension (noun) — a measurable extent such as length, width, height, or
+    a specific aspect of something.
+
+    1. Physical meaning:
+     * The box has three dimensions. → It has length, width, and height.
+     * Measure the dimensions of the room. → Check its size.
+
+    2. Abstract meaning:
+     * This problem has many dimensions. → It has many aspects to consider.
+     * Add a new dimension to the analysis. → Add another important factor.
+
+    👉 Key idea: a size, measurement, or aspect of something.
+    🗣 Pronunciation: /dɪˈmɛnʃən/
+
+- word: "inefficient"
+  meaning: |
+    inefficient (adjective) — not working well, wasting time,
+    effort, or resources.
+
+    1. Work / processes:
+     * This method is inefficient. → It wastes time or effort.
+     * The system is inefficient under heavy load. → It doesn’t perform well.
+
+    2. Everyday situations:
+     * An inefficient route took longer. → A slower way was chosen.
+     * The machine is inefficient now. → It uses more energy than needed.
+
+    👉 Key idea: poor performance with wasted effort or resources.
+    🗣 Pronunciation: /ˌɪnɪˈfɪʃənt/
+
+- word: "omit"
+  meaning: |
+    omit (verb) — to leave something out or not include it.
+
+    1. In writing / speaking:
+     * Don’t omit important details. → Don’t leave them out.
+     * He omitted her name from the list. → He didn’t include her.
+
+    2. In technical contexts:
+     * The program omits empty lines. → It skips them.
+     * Omit unnecessary steps. → Remove what isn't needed.
+
+    👉 Key idea: leaving something out intentionally or accidentally.
+    🗣 Pronunciation: /oʊˈmɪt/
+
+- word: "rely"
+  meaning: |
+    rely (verb) — to depend on someone or something with confidence.
+
+    1. People / relationships:
+     * You can rely on him. → You can trust him to do what he promises.
+     * She relies on her friends for support. → They help her emotionally.
+
+    2. Systems / objects:
+     * The program relies on this library. → It depends on it to work.
+     * We rely on Wi-Fi for communication. → It’s necessary for our tasks.
+
+    👉 Key idea: depending on someone or something.
+    🗣 Pronunciation: /rɪˈlaɪ/
+
+- word: "consider"
+  meaning: |
+    consider (verb) — to think carefully about something
+    before making a decision.
+
+    1. Everyday use:
+     * I’ll consider your suggestion. → I’ll think about it carefully.
+     * Consider the risks before acting. → Think about possible problems.
+
+    2. Academic / analytical meaning:
+     * Consider the following example. → Look closely at it.
+     * We must consider all factors. → We need to evaluate everything.
+
+    👉 Key idea: thinking carefully before choosing.
+    🗣 Pronunciation: /kənˈsɪdər/
+
+- word: "regret"
+  meaning: |
+    regret (verb) — to feel sad or disappointed about something
+    that happened or something you did or didn’t do.
+
+    1. Personal emotions:
+     * I regret saying that. → I wish I hadn’t said it.
+     * She regrets moving away. → She wishes she had stayed.
+
+    2. Polite expressions:
+     * I regret to inform you… → I'm sorry to tell you this.
+     * We regret any inconvenience. → We apologize for the problem.
+
+    👉 Key idea: wishing something had been different.
+    🗣 Pronunciation: /rɪˈɡrɛt/
+
+- word: "sacrifice"
+  meaning: |
+    sacrifice (verb) — to give up something valuable
+    for the sake of something more important.
+
+    1. Personal life:
+     * She sacrificed her free time to help. 
+       → She gave it up for a good reason.
+     * Parents often sacrifice a lot for their children.
+       → They give up things for them.
+
+    2. Work / goals:
+     * He sacrificed comfort to achieve success.
+       → He accepted difficulty for the goal.
+     * They sacrificed speed for accuracy. → They chose quality over speed.
+
+    👉 Key idea: giving up something important for a greater purpose.
+    🗣 Pronunciation: /ˈsæk.rɪ.faɪs/
+
+- word: "obsessed"
+  meaning: |
+    obsessed (adjective) — unable to stop thinking about something or someone.
+
+    1. Strong mental focus (often unhealthy):
+     * She’s obsessed with this idea. → She can’t stop thinking about it.
+     * He became obsessed with the game. → He focused on it too much.
+     👉 Key idea: excessive mental fixation.
+
+    2. Deep interest / passion:
+     * I'm obsessed with learning languages. → I enjoy it a lot.
+     * She’s obsessed with photography. → She loves it intensely.
+     👉 Key idea: very strong interest or passion.
+
+    🗣 Pronunciation: /əbˈsɛst/
+
+
+- word: "indispensable"
+  meaning: |
+    indispensable (adjective) — absolutely necessary; cannot be replaced.
+
+    1. People / roles:
+     * She is indispensable to the team. 
+       → They can’t function well without her.
+     * A good mentor is indispensable. → You truly need one.
+     👉 Key idea: someone essential.
+
+    2. Objects / tools:
+     * Water is indispensable for life. → Life cannot exist without it.
+     * This tool is indispensable for the project.
+       → It’s required to complete the work.
+     👉 Key idea: something critically necessary.
+
+    🗣 Pronunciation: /ˌɪndɪˈspɛnsəbəl/
+
+- word: "infallible"
+  meaning: |
+    infallible (adjective) — unable to make mistakes; always correct.
+
+    1. People / decisions:
+     * No one is infallible. → Everyone makes mistakes.
+     * They treated the expert as if he were infallible.
+       → They believed he couldn’t be wrong.
+     👉 Key idea: mistake-free person or judgment.
+
+    2. Systems / methods:
+     * This method is not infallible. → It can fail sometimes.
+     * The system seemed infallible at first. → It looked perfect but wasn't.
+     👉 Key idea: something believed to be perfectly reliable.
+
+    🗣 Pronunciation: /ɪnˈfæləbəl/
+
+- word: "reciprocate"
+  meaning: |
+    reciprocate (verb) — to respond to an action or feeling with a similar one.
+
+    1. Emotions / relationships:
+     * She didn’t reciprocate his feelings. → She didn’t feel the same way.
+     * They reciprocated kindness with gratitude.
+       → They returned kindness in a similar way.
+     👉 Key idea: returning a feeling.
+
+    2. Actions / exchanges:
+     * I helped him, and he reciprocated. → He did something helpful in return.
+     * They reciprocate support in the group. → They help each other equally.
+     👉 Key idea: returning an action or support.
+
+    🗣 Pronunciation: /rɪˈsɪprəˌkeɪt/
+
+- word: "consistent"
+  meaning: |
+    consistent (adjective) — acting the same way over time; steady and reliable.
+
+    1. Behavior / habits:
+     * She is consistent in her work. → She always performs steadily.
+     * Stay consistent with your practice. → Keep doing it regularly.
+     👉 Key idea: stable and regular behavior.
+
+    2. Logic / correctness:
+     * His argument is consistent with the facts. → It matches the evidence.
+     * The results were consistent across tests. → They repeated reliably.
+     👉 Key idea: matching, agreeing, or repeating reliably.
+
+    🗣 Pronunciation: /kənˈsɪstənt/
+
+- word: "Pursuit"
+  meaning: |
+    Pursuit (noun) — the act of trying to achieve something, or the activity
+    of following or chasing something.
+
+    1. Trying to achieve a goal:
+     * The pursuit of happiness motivates many people.
+       → Trying to find happiness drives them forward.
+     * He is in pursuit of success. → He is working hard to reach his goals.
+     👉 Key idea: actively working toward a goal.
+
+    2. Chasing or following something:
+     * The police were in pursuit of the suspect. 
+       → They were following him closely.
+     * She continued her pursuit of knowledge.
+       → She kept learning more and more.
+     👉 Key idea: following or chasing something persistently.
+
+    🗣 Pronunciation: /pərˈsuːt/
+
+- word: "defining"
+  meaning: |
+    defining (adjective) — very important in shaping the nature, meaning,
+    or identity of something.
+
+    1. Important / characteristic:
+     * It was a defining moment in her career. 
+       → It changed her career in an important way.
+     * Hard work is a defining quality of leadership. 
+       → It strongly shapes what leadership means.
+     👉 Key idea: something that shapes the identity of a person or thing.
+
+    2. Clarifying meaning / explaining:
+     * A defining explanation makes the idea clear.
+       → It gives the main meaning.
+     * Defining features help you recognize something. 
+       → They show what makes it unique.
+     👉 Key idea: something that clarifies or explains the essence.
+
+    🗣 Pronunciation: /dɪˈfaɪnɪŋ/
+
+
+- word: "to avoid"
+  meaning: |
+    to avoid (verb) — to stay away from something, or prevent something bad
+    from happening.
+
+    1. Staying away from something:
+     * I try to avoid sweets. → I try not to eat them.
+     * He avoids crowded places. → He stays away from them.
+     👉 Key idea: not going near something.
+
+    2. Preventing something from happening:
+     * She left early to avoid traffic. → She wanted to prevent delays.
+     * Avoid mistakes by checking your work. → Prevent errors by reviewing it.
+     👉 Key idea: preventing an unwanted outcome.
+
+    🗣 Pronunciation: /əˈvɔɪd/
+
+- word: "temporary"
+  meaning: |
+    temporary (adjective) — lasting only for a short time; not permanent.
+
+    1. Short-term situations:
+     * This job is temporary. → It will not last long.
+     * The shop is closed for temporary repairs.
+       → Only short-term work is happening.
+     👉 Key idea: lasting for a limited time.
+
+    2. Human conditions / states:
+     * Her sadness was temporary. → It didn’t last long.
+     * The pain is temporary. → It will go away soon.
+     👉 Key idea: something that changes and does not stay permanently.
+
+    🗣 Pronunciation: /ˈtɛmpəˌrɛri/
+
+
+
+  
