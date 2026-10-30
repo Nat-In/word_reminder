@@ -1,0 +1,89 @@
+word_reminder/
+│
+├── app.py              ← Controller + root + mainloop
+├── word_window.py      ← UI (Toplevel)
+├── random_word.py      ← Data layer
+├── db/...
+
+три слоя:
+1️⃣ Data Layer      → работа с БД
+2️⃣ UI Layer        → tkinter, только отображение
+3️⃣ Controller      → связывает всё вместе
+
+app.py
+    root = tk.Tk()
+    root.withdraw() #сворачиваем окно на паузу / root.deiconify() - вернуть окно
+    root.mainloop()
+ 
+Controller   
+    -получение слова
+    -создание окна
+    -реакцию на кнопки
+    -изменение статуса в БД
+    -запуск 15/15 через after()
+    -завершение приложения
+    Это единственный слой, который понимает всю картину
+    
+WordWindow
+    ├── Label
+    ├── Buttons
+    ├── callback("know")
+    └── destroy()
+
+1️⃣ Data Layer:
+- random_word.py
+- функции работы с БД
+- update_status(word, status) ← это нам ещё нужно добавить
+Этот слой НЕ знает про tkinter.
+Он работает только с SQLite.
+
+2️⃣ UI Layer - word_window.py - просто интерфейс:
+Отдельный файл
+class WordWindow(tk.Toplevel): -> получает root как родителя
+Этот класс:
+- создаёт окно
+- создаёт Label
+- создаёт кнопки
+- настраивает цвет, размеры
+- ничего не знает про SQLite
+- не знает откуда пришло слово
+- не знает что будет дальше
+- не знает про 15/15
+Он не меняет статус в БД.
+Он просто сообщает: “пользователь нажал know”
+
+вызывает callback function
+метод: 
+def on_know(self):
+    self.callback("know")
+    self.destroy()
+в WordWindow:
+self.know_button = tk.Button(
+    self,
+    text="Know",
+    command=self.on_know
+)
+
+3️⃣ Controller (state manager)— мозг приложения - в app.py:
+class ReminderApp:
+- создаёт root = Tk()
+- запускает mainloop()
+- вызывает get_random_word()
+- создаёт WordWindow
+- получает сигнал от окна
+- меняет статус в БД
+- запускает таймер через after()
+
+Он хранит:
+-текущее слово
+-текущий таймер
+-текущее состояние (show / pause)
+Он управляет жизненным циклом приложения.
+
+определение callback function (связь  UI <-> Data):
+def handle_result(self, action):
+    if action == "know":
+        update_status(...)
+
+root.withdraw() -> скрывает окно с экрана, но не удаляет его из памяти и не завершает работу экрана
+root.after(9000, root.deiconify) -> снова отобразить скрытое окно

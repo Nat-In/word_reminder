@@ -6,14 +6,14 @@ word_reminder/
 │
 ├── word_loader.py         - loading words from yamal
 ├── word_window.py         - popup reminder window
-├──            
+├── random_word.py         - get a random word to disply           
 │
 ├── add_words.yaml         - file with added words
 ├── app.log                - application operation records
 │
 ├── db/                    - entire related to the db
 │   ├── create_db.py
-│   └── wordsdb.sqlite.    - are created automatically
+│   └── wordsdb.sqlite     - are created automatically
 │
 ├── requirements.txt       - external Python libraries
 ├── README.md
@@ -29,7 +29,7 @@ The user can view the meaning, mark the word as known, or leave it for further l
 This section explains how a user can set up the project on their computer.
 1. *clone the repository*
   download project from GitHub
-    bash -> git clone <my-repo-url> !!!!!!!!!!!!
+    bash -> git clone <https://github.com/Nat-In/word_reminder.git> 
     bash -> cd word_reminder
 2. *create a virtual environment* (optional)
   helps to separate project dependencies from system Python
@@ -69,7 +69,7 @@ All processes will be recorded in file /app.log/
   'meaning' -> description
   'know' -> mark, close the window, start 15min pause
   'learn' -> keep as learning, close the window, start 15min pause
-- if no buttons is pressed, the window stay visible for 15min and closes automatically
+- if no buttons is pressed, the window stay visible for 15min and closes automatically for a pause
 15min show -> 15min pause -> repeat
 - new random word appears each cycle
 

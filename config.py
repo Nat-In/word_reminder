@@ -1,7 +1,7 @@
 # all project settings
 
 # path
-DB_PATH = "db/wordsdb.sqlite"
+DB_PATH = "db/wordsdb.sqlite"    # db/ -> file directory 
 YAML_FILE = "add_words.yaml"
 LOG_FILE = "app.log"
 
