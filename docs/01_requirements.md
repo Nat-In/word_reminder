@@ -76,7 +76,7 @@ The reminder window shall display the current word and provide access to it mean
 ### NFR-04 Local Operation
 The initial version shall operate locally without requiring an internet connection or cloud services.
 
-## $. Acceptance Criteria
+## 4. Acceptance Criteria
 Acceptance criteria define the conditions that must be met for the application to be considered functional.
 - the app can retrieve a word from the local vocabulary database
 - only word with the status learn are eligible for random selection
@@ -89,7 +89,12 @@ Acceptance criteria define the conditions that must be met for the application t
 - a new reminder cycle starts after the pause interval
 - vocabulary data remind available after restarting the app
 
-
+## 5. Open Question
+The following details require clarification before implementation:
+- what happens if the user mark a word as know or learn and then changes their decision during the same display interval?
+- what should happen if the database contains no words with the status learn?
+- should the app start the reminder cycle automatically when launched?
+- how should the user add new words: through the file or directly through the app?
 
 
 
