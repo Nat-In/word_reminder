@@ -55,7 +55,39 @@ The app shall allow the user to interact with the reminder window during the wor
 
 The user shall be able to view the meaning and select a learning status while the word is displayed.
 
+## 3. Non-Functional Requirements
+Non-functional requirements describe the quality attributes and operating conditions of the application.
 
+### NFR-01 Platform Compatibility
+The initial version shall run on macOs.
+
+The application is designed with future cross-platform compatibility in mind.
+
+### NFR-02 Data Persistence
+Vocabulary entries and their statuses shall be stored persistently in a local database.
+
+Data shall remain available after the application is closed and restarted.
+
+### NFR-03 User Interface
+The application shell provide a simple and easy-to-use graphical interface.
+
+The reminder window shall display the current word and provide access to it meaning and learning actions.
+
+### NFR-04 Local Operation
+The initial version shall operate locally without requiring an internet connection or cloud services.
+
+## $. Acceptance Criteria
+Acceptance criteria define the conditions that must be met for the application to be considered functional.
+- the app can retrieve a word from the local vocabulary database
+- only word with the status learn are eligible for random selection
+- the selected word is displayed in the reminder window
+- the user can view the meaning of the displayed word
+- the user can change the learning status of a word
+- changes to learning statuses are saved in the database
+- the word display interval last 15 min unless an explicitly defined user action ends it earlier
+- the pause interval lasts 15 min
+- a new reminder cycle starts after the pause interval
+- vocabulary data remind available after restarting the app
 
 
 
