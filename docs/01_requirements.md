@@ -28,10 +28,18 @@ The app shall allow the user to add new words and their meanings to the vocabula
 ### FR-03 Random Word Selection
 The app shall select one random word from the database with the status `learn`.
 
-If no words with the `learn` status are available, the application must select a random word with the `known` status.
+If no words with the `learn` status are available, the application shall notify the user and offer two options:
+- **Continue:** start displaying random words with the status `known`
+- **Exit:** terminate the application
+
+If new words with the learn status become available, the app shall automatically prioritize them again.
 
 ### FR-04 Displaying Word Meaning 
 The app shall allow the user to view the meaning or description of the currently displayed word.
+
+Viewing the meaning must not change the word's learning status or affect the reminder timer.
+
+The `learn` and `known` buttons must remain available.
 
 ### FR-05 Marking a Word as Known
 When the user clicks the `known` button:
@@ -56,7 +64,7 @@ the app must use the following reminder cycle:
 The cycle must repeat automatically while the app is running.
 
 ### FR-08 Automatic Cycle Progression
-If the user does not interact with the reminder window, the app must automatically:
+If the user does not interact with the reminder window, the application must automatically:
 - finish the 15 minute display interval
 - close the reminder window
 - start a 15 minute break
@@ -69,6 +77,8 @@ When the user starts the application, it must:
 - start the reminder cycle
 - display the first reminder window with a randomly selected word
 
+After restarting the application, a new reminder cycle must begin with a newly selected random word.
+
 ### FR-10 Reminder Window Controls
 The user must be able to:
 - minimize the reminder window
@@ -78,14 +88,20 @@ Minimizing the window must not interrupt the reminder cycle.
 
 Closing the window manually must not stop the application or interrupt the current reminder cycle. The next reminder window must appear automatically when the next display cycle begins.
 
+There is no manual option to reopen a closed reminder window in V1.
+
 ### FR-11 Application Shutdown
 The user must be able to terminate the application completely.
 When the application is terminated, the reminder cycle must stop.
 
 ### FR-12 Empty Vocabulary and User Notification
-If the database contains no words, the application must notify the user that the vocabulary is empty.
+If the database contains no words, the application shall display the following message:
 
-If there are no words with the `learn` status, the application must notify the user that all words have been marked as known and suggest adding new words.
+"You vocabulary is empty, pleas add words to get started"
+
+After displaying the message, the application must terminate.
+
+If no words with the learn status are available, the application shall follow the behavior described in FR-03.
 
 ## 3. Non-Functional Requirements
 Non-functional requirements describe the quality attributes and operating conditions of the application.
@@ -111,15 +127,21 @@ The initial version shall operate locally without requiring an internet connecti
 ## 4. Acceptance Criteria
 Acceptance criteria define the conditions that must be met for the application to be considered functional.
 - the app can retrieve a word from the local vocabulary database
-- only word with the status learn are eligible for random selection
-- the selected word is displayed in the reminder window
-- the user can view the meaning of the displayed word
-- the user can change the learning status of a word
+- the app randomly selects words with the status learn when such words are available
+- if no words with the learn status are available, the user can choose to continue with random words with the known status or exit the application
+- when new words with the learn status became available, the app prioritizes them again
+- if the vocabulary database is empty, the app displays the appropriate message and terminates
+- the selected word is displayed in the reminder windows
+- the user can view the meaning of the displayed word without affecting the timer or learning status
+- the user can change the learning status of a word using the `known` and `learn` buttons
 - changes to learning statuses are saved in the database
-- the word display interval last 15 min unless an explicitly defined user action ends it earlier
+- the word display interval lasts 15 min unless the user clicks the known button
+- clicking the `learn` button does not end the current display interval
 - the pause interval lasts 15 min
 - a new reminder cycle starts after the pause interval
-- vocabulary data remind available after restarting the app
+- minimizing or manually closing the reminder window does not interrupt the reminder cycle
+- vocabulary data and learning statuses remain available after restarting the app
+- after restarting the app, a new reminder cycle begins with a newly selected random word
 
 ## 5. Open Question
 The following details require clarification before implementation:
