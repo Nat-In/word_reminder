@@ -1,5 +1,5 @@
 ```mermaid
-%%{init: {"flowchart": {"wrappingWidth": 450}, "theme": "base", "themeVariables": {"background": "#000000", "primaryTextColor": "#ffffff", "lineColor": "#aaaaaa", "fontFamily": "Arial"}}}%%
+%%{init: {"theme": "base", "flowchart": {"nodeSpacing": 8, "rankSpacing": 8, "diagramPadding": 4}, "themeVariables": {"background": "#000000", "primaryTextColor": "#ffffff", "lineColor": "#aaaaaa", "fontFamily": "Arial"}}}%%
 
 flowchart TB
     Controller["Controller<br/>Application logic and coordination"]
