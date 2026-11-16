@@ -75,6 +75,78 @@ The word selection logic worcs as follows:
 - The UI Layer displays notification and passes the user's choice the Controller.
 
 ### 2.3 Reminder Cycle Management
+The Controller is responsible for managing the entire lifecycle of timers. This includes:
+- starting timers
+- storing timer identifiers so they can managed later
+- cancelling timers when necessary
+- handling timer completion and triggering the next action
+
+It ensures that the reminder cycle follows the correct sequence and that scheduled actions are performed at the right time.
+
+The reminder cycle consist of two intervals:
+- **Display interval** - 15 minutes during which the word is displayed.
+- **Break interval** - a 15 minute pause between words.
+
+#### Cycle Sequence
+The reminder cycle follows this sequence:
+1. The Controller requests the next word from the Data Layer.
+2. The Controllers sends the selected word to the UI Layer for display.
+3. The Controller starts a 15 minute display timer.
+4. When the display interval ends, the Controller:
+   - instructs the UI Layer to close the reminder window if it is still open
+   - starts a 15 minute break timer
+5. When the break interval ends, the Controller starts selecting the next word.
+6. After a new word is selected, the next cycle begins.
+
+The timer repeats automatically while the application is raining.
+
+#### Timer and Window Management
+1. If the user clicks **Know**, the Controller stops the current word display timer, closes the window and immediately starts a 15 minute break timer.
+2. If the user clicks **Learn**, the current timer continues running. The word remains displayed until the 15 minute display interval ends. After that, the break begins.
+3. If the user minimises the window, the Controller does not stop the timer. When the display interval ends, a 15 minute break begins. After the break, the Controller selects a new word and the window with that word appears automatically.
+4. If the user exits the application, the Controller cancels all active timers. No scheduled actions are performed after that.
+
+#### Separation of Responsibilities
+- The Controller manages the reminder cycle, timers and transitions between display and break intervals.
+- The UI Layer displays and closes the reminder window when instructed by the Controller.
+- The Data Layer provides the next word for display.
+
+### 2.4 User Actions Handling
+The Controller is responsible for handling user actions received from the UI Layer and determining what the application should do in response.
+
+The main user actions are:
+1. Meaning
+   - The Controller receives an event when the user clicks the Meaning button.
+   - The Controller instructs the UI Layer to display the meaning or description of the current word.
+   - Viewing the meaning does not change the word's status or affect the current timer.
+
+2. Know
+   - The Controller receives an event when the user clicks the Know button.
+   - The Controller initiates the process of changing the word's status to known.
+   - The Controller then performs the required timer and window actions according to the Reminder Cycle Management logic.
+
+3. Learn
+   - The Controller receives an event when the user clicks the Learn button.
+   - The Controller initiates the process of changing the word's status to learn.
+   - The current display interval continues according to the Reminder Cycle Management logic.
+
+4. Continue/Exit
+
+If no words with the learn status are available when selecting the next word, the Controller receives the user's choice:
+   - **Continue** - continues the application in known mode, displaying words with the known status.
+   - **Exit** - starts the application shutdown process.
+
+#### Separation of Responsibilities
+- The UI Layer sends events related to user actions to the Controller.
+- The Controller handles these events, determines what should happen next and coordinates the work of other components.
+- The Data Layer performs data operations when requested by the Controller.
+
+The UI Layer does not need to know how the Controller or Data Layer works internally. It only needs to know which visual actions to perform, such as displaying information or closing a window.
+
+This separation makes the application easier to maintain. If the graphical library is replaced, only the UI Layer implementation should need to change. The Controller and Data Layer can remain unchanged, as long as the communication between the components stays the same.
+
+### 2.5 Word Status Management
+
 
 
 
