@@ -146,7 +146,57 @@ The UI Layer does not need to know how the Controller or Data Layer works intern
 This separation makes the application easier to maintain. If the graphical library is replaced, only the UI Layer implementation should need to change. The Controller and Data Layer can remain unchanged, as long as the communication between the components stays the same.
 
 ### 2.5 Word Status Management
+The Controller is responsible for managing word statuses and coordinating the process of changing them.
 
+When the user clicks `Known` or `Learn`, the Controller:
+1. Determines the new status based on the button clicked:
+   - **Known** - known
+   - **Learn** - learn
+2. Calls the appropriate Data Layer method and passes the word ID and the new status.
+3. Receives the operation result from the Data Layer.
+4. Checks the results and decides what to do next:
+   - If the status is updated successfully, the Controller continues with the corresponding process.
+   - If an error occurs, the Controller handles it according to the Error Handling logic.
+
+#### Separation Responsibilities
+- The Controller determines the new status and manages the update process.
+- The Data Layer updates the word status in the database and returns the result to the Controller.
+- The Database stores the updated word status.
+
+The Controller does not execute SQL queries or update database records directly. It calls a Data Layer method, which is responsible for this operation.
+
+### 2.6 Application Lifecycle Management
+The Controller is responsible for managing the application's lifecycle: keeping it running after startup and ensuring that it shuts down correctly.
+
+#### Application Runtime
+After startup, the Controller manages the application's main processes and keeps them running:
+- ensures that the reminder cycle continues
+- handles events and user actions
+- coordinates interactions between the UI Layer and the Data Layer
+- keeps the application running even when the reminder window is minimised
+
+The application continues running in the background until the user exits it.
+
+#### Application Shutdown
+When the user exit the application, the Controller:
+1. Stops the reminder cycle.
+2. Cancels all active timers to prevent scheduled actions from running.
+3. Initiates the release of resources used by the application.
+4. Shuts down the application.
+
+#### Application Restart
+When the application is started again:
+- a new reminder cycle begins
+- a new random word is selected
+- previously saved words and their statuses remain available
+- the timer status from the previous session are not restored
+
+#### Separation of Responsibilities
+- The Controller manages the application's lifecycle and coordinates startup and shutdown processes.
+- The Data Layer is responsible for closing database connections properly and releasing related resources.
+- The UI Layer performs the necessary actions related to the graphical interface.
+
+### 2.7 Error Handling and Recovery
 
 
 
