@@ -119,17 +119,14 @@ The main user actions are:
    - The Controller receives an event when the user clicks the Meaning button.
    - The Controller instructs the UI Layer to display the meaning or description of the current word.
    - Viewing the meaning does not change the word's status or affect the current timer.
-
 2. Know
    - The Controller receives an event when the user clicks the Know button.
    - The Controller initiates the process of changing the word's status to known.
    - The Controller then performs the required timer and window actions according to the Reminder Cycle Management logic.
-
 3. Learn
    - The Controller receives an event when the user clicks the Learn button.
    - The Controller initiates the process of changing the word's status to learn.
    - The current display interval continues according to the Reminder Cycle Management logic.
-
 4. Continue/Exit
 
 If no words with the learn status are available when selecting the next word, the Controller receives the user's choice:
@@ -197,6 +194,34 @@ When the application is started again:
 - The UI Layer performs the necessary actions related to the graphical interface.
 
 ### 2.7 Error Handling and Recovery
+The Controller is responsible for handling error information received from other components and deciding how the application should respond to problems.
+
+#### Error Handling
+When another component reports an error, the Controller:
+1. Receives information about the error.
+2. Checks the operation result and determines what can be done next.
+3. Chooses an appropriate way to handle the error:
+   - continue running if possible
+   - retry the operation if appropriate
+   - inform the user about the error through the UI Layer
+   - exit the application if it cannot continue running
+
+#### Recovery
+If the application can continue running after an error, the Controller takes the necessary steps to restore normal operation.
+
+For example:
+- If a data operation fails, the Controller determines whether the operation can be retried or whether the application can continue without its result.
+- If an error makes it impossible for the application to continue running, the Controller starts the shutdown process.
+
+#### Separation of Responsibilities
+- The Controller checks error information, makes decisions and determines what should happen next.
+- The Data Layer detects errors that occur during data operations and reports them to the Controller.
+- The UI Layer displays error messages to the user when instructed by the Controller.
+
+---
+
+# Data Layer
+## 1. Data Laer Overview
 
 
 
